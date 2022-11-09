@@ -1,0 +1,641 @@
+PurgeAbilities:
+  License: ""
+  Custom: ""
+  Messages:
+    GiveMessage:
+      - "&cYou have received a %ability%"
+    DisabledItem:
+      - "%ability% &cis currently disabled!"
+    Cooldown:
+      GlobalCooldown:
+        - "&cYou must wait &c&l%time% &cseconds before using another partner package ability!"
+      Cooldown:
+        - "&cYou are still on cooldown for &l%time%&c seconds!"
+    ResetCooldown:
+      TargetPlayer:
+        - "&cYour &e%ability%&c cooldown has been reset by &e%player%&c!"
+      Player:
+        - "&cYou have reset &e%player%&c's &e%ability% &ccooldown&c!"
+    ItemStatus:
+      Enabled:
+        - "&aYou have enabled %ability%&a!"
+      Disabled:
+        - "&cYou have disabled %ability%&c!"
+  Prefixes:
+    ListFormat: "%prefix% %ability%"
+    EnabledPrefix: "&7(&aEnabled&7)"
+    DisabledPrefix: "&7(&cDisabled&7)"
+    InvisibilityPrefix: "&7&oInvisible"
+  Settings:
+    ProjectileFix: true #If your projectile tiles are getting duplicated set this to false!
+    AbilityListGUI: false #Shows /ability list in a gui instead of chat
+    GiveMessage: true #Messaged when given an ability item
+    DisabledItemMessage: true #Messaged when a disabled ability item is used
+    Command: #Runs after a ability is used. %ability%
+      Enabled: false
+      Command: "customtimer add %ability% %time%"
+    GlobalCooldown: #Like viper where there is a Partner Package cooldown before you can use any other ability
+      RunCommand: false #Runs if you a command to be ran with the globalcooldown
+      Enabled: true
+      Cooldown: 10
+      Command: "customtimer add &d&lGlobalCooldown %time%"
+
+
+Cocaine:
+  Enabled: true
+  Sound:
+    Enabled: true
+    Sound: "NOTE_PIANO"
+  SpeedFix: # If you are getting speed 3 longer than you have in your Effects, set this to to true and set the delay to the same time you have in your Effects.
+    Enabled: true
+    Delay: 5
+  Enchantments:
+    1:
+      Enchantment: "DURABILITY"
+      Level: 1
+  Cooldown: 60
+  Message:
+    - "&c%heart% &eYou have used your %ability% &eability!"
+    - "&eYou are now on cooldown for&f 60 seconds!"
+  Effects:
+    1:
+      Effect: "SPEED"
+      Time: 5
+      Level: 3
+  Item:
+    Material: "SUGAR"
+    Name: "&6&lCocaine"
+    Lore:
+      - ""
+      - "&eRight-Click to gain effects!"
+      - ""
+
+Snowport:
+  Enabled: true
+  Sound:
+    Enabled: true
+    Sound: "NOTE_PIANO"
+  Enchantments:
+    1:
+      Enchantment: "DURABILITY"
+      Level: 1
+  Cooldown: 40
+  Range:
+    Enabled: true
+    Range: 8
+  Messages:
+    Hit:
+      Damaged:
+        - "&c%heart% &eYou have been by a %ability%&e by &6%player%&e!"
+        - "&eYou have switched positions with &6%player%&e!"
+      Damager:
+        - "&c%heart% &eYou have hit &6%player%&e with a %ability%&e!"
+        - "&eYou are now on cooldown for&f 40 seconds!"
+    Range:
+      - "&6%player% &eis out of range!"
+  Item:
+    Name: "&6&lSnowport"
+    Lore:
+      - ""
+      - "&eHit a player with this snowball to switch positions with them!"
+      - ""
+
+SwitchStick:
+  Enabled: true
+  Sound:
+    Enabled: true
+    Sound: "NOTE_PIANO"
+  Enchantments:
+    1:
+      Enchantment: "DURABILITY"
+      Level: 1
+  Cooldown: 48
+  Messages:
+    Hit:
+      Damaged:
+        - "&c%heart% &eYou have been hit by a %ability%&e by &6%player%&e!"
+        - "&eYou have been turned 180 degrees!"
+      Damager:
+        - "&c%heart% &eYou have hit &6%player% &ewith a %ability%&e!"
+        - "&eYou are now on cooldown for &f48 seconds!"
+  Item:
+    Material: "STICK"
+    Name: "&6&lSwitchStick"
+    Lore:
+      - ""
+      - "&eHit an enemy to make then turn 180 degrees"
+      - ""
+
+Refill:
+  Enabled: true
+  Sound:
+    Enabled: true
+    Sound: "NOTE_PIANO"
+  Enchantments:
+    1:
+      Enchantment: "DURABILITY"
+      Level: 1
+  Cooldown: 100
+  Message:
+    - "&c%heart% &eYou have used your %ability%&e!"
+    - "&eYou are now on cooldown for&f 100 seconds!"
+  Item:
+    Material: "NETHER_STAR"
+    Name: "&6&lRefill"
+    Lore:
+      - ""
+      - "&eRight-Click to get a refill of potions!"
+      - ""
+
+BelchBomb:
+  Enabled: true
+  Sound:
+    Enabled: true
+    Sound: "NOTE_PIANO"
+  Enchantments:
+    1:
+      Enchantment: "DURABILITY"
+      Level: 1
+  Effects:
+    1:
+      Effect: "SLOW"
+      Time: 4
+      Level: 3
+    2:
+      Effect: "BLINDNESS"
+      Time: 4
+      Level: 1
+  Cooldown: 50
+  Messages:
+    Damager:
+      - "&c%heart% &eYou have used your %ability%&e ability!"
+      - "&eYou are now on cooldown for&f 50 seconds!"
+    Damaged:
+      - "&c%heart% &eYou have been hit by a %ability%&e!"
+      - "&eYou have been given bad effects!"
+  Range: 5
+  Item:
+    Material: "SLIME_BALL"
+    Name: "&6&lBelchBomb"
+    Lore:
+      - ""
+      - "&eRight-Click to give nearby players bad effects!"
+      - ""
+
+SmelterShovel:
+  Enabled: true
+  Sound:
+    Enabled: true
+    Sound: "NOTE_PIANO"
+  Enchantments:
+    1:
+      Enchantment: "DURABILITY"
+      Level: 3
+    2:
+      Enchantment: "DIG_SPEED"
+      Level: 3
+  Item:
+    Material: "DIAMOND_SPADE"
+    Name: "&6&lSmelterShovel"
+    Lore:
+      - ""
+      - "&eGet glass instantly by using this!"
+      - ""
+
+InstantCrapple:
+  Enabled: true
+  Sound:
+    Enabled: true
+    Sound: "EAT"
+  Enchantments:
+    1:
+      Enchantment: "DURABILITY"
+      Level: 1
+  Cooldown: 40
+  Message:
+    - "&c%heart%&e You have used your %ability%&e!"
+    - "&eYou are now on cooldown for&f 40 seconds!"
+  Item:
+    Name: "&6&lInstantCrapple"
+    Lore:
+      - ""
+      - "&eRight-Click to eat a golden apple instantaneously"
+      - ""
+
+FreezeGun:
+  Enabled: true
+  Sound:
+    Enabled: true
+    Sound: "NOTE_PIANO"
+  Enchantments:
+    1:
+      Enchantment: "DURABILITY"
+      Level: 1
+  Effects:
+    1:
+      Effect: "SLOW"
+      Time: 5
+      Level: 3
+    2:
+      Effect: "BLINDNESS"
+      Time: 5
+      Level: 3
+  Cooldown: 70
+  Messages:
+    Damager:
+      - "&c%heart%&e You have used your %ability%&e on &6%player%&e!"
+      - "&eYou are now on cooldown for &f 70 seconds!"
+    Damaged:
+      - "&c%heart%&e You have been hit by a %ability%&e from &6%player%&e!"
+      - "&eYou have been given debuff effects!"
+  Item:
+    Material: "DIAMOND_HOE"
+    Name: "&6&lFreezeGun"
+    Lore:
+      - ""
+      - "&eShoot an enemy with this gun to give them debuff effects!"
+      - ""
+
+FastPearl:
+  Enabled: true
+  Sound:
+    Enabled: true
+    Sound: "NOTE_PIANO"
+  Enchantments:
+    1:
+      Enchantment: "DURABILITY"
+      Level: 1
+  Command: "timer set enderpearl 6 %player%" #Change this to your command for setting timers in your HCF core.
+  Message:
+    - "&c%heart% &eYou have used your %ability%&e!"
+    - "&eYour enderpearl cooldown has been set to&f 6 seconds!"
+  Item:
+    Name: "&6&lFastPearl"
+    Lore:
+      - ""
+      - "&eThrow this enderpearl to receive a shorter enderpearl cooldown."
+      - ""
+
+OPPearl:
+  Enabled: true
+  Sound:
+    Enabled: true
+    Sound: "NOTE_PIANO"
+  Enchantments:
+    1:
+      Enchantment: "DURABILITY"
+      Level: 1
+  Effects:
+    1:
+      Effect: "INCREASE_DAMAGE"
+      Level: 2
+      Time: 5
+  Message:
+    - "&c%heart% &eYou have used your %ability%&e!"
+    - "&eYou have been given buff effects!"
+  Item:
+    Name: "&6&lOPPearl"
+    Lore:
+      - ""
+      - "&eOn landing, this enderpearl will give you buff effects!"
+      - ""
+
+TimerReset:
+  Enabled: true
+  Sound:
+    Enabled: true
+    Sound: "NOTE_PIANO"
+  Enchantments:
+    1:
+      Enchantment: "DURABILITY"
+      Level: 1
+  Cooldown: 800
+  Messages:
+    Used:
+      - "&c%heart% &eYou have used your %ability%&e ability!"
+      - "&eYou are now on cooldown for&f 13 minutes!"
+    Reset:
+      - "&cYou have reset your &c&l%cooldown% &ccooldown."
+  GUI:
+    Name: "&3&lTimer Reset"
+    Size: 9
+    Timers:
+      1:
+        Timer: "Enderpearl"
+        Command: "timer set Enderpearl %player% 0s"
+        Slot: 3
+        Item:
+          Material: "ENDER_PEARL"
+          Name: "&6Enderpearl"
+          Lore:
+            - ""
+            - "&7&oClick here to reset your enderpearl cooldown"
+            - ""
+      2:
+        Timer: "God Apple"
+        Command: "timer set godapple %player% 0s"
+        Slot: 6
+        Item:
+          Material: "GOLDEN_APPLE"
+          Name: "&6God Apple"
+          Lore:
+            - ""
+            - "&7&oClick here to reset your god apple cooldown"
+            - ""
+  Item:
+    Material: "FEATHER"
+    Name: "&6&lTimer Reset"
+    Lore:
+      - ""
+      - "eRight Click to open a gui of timers to reset!"
+      - ""
+
+
+PocketBard:
+  Enabled: true
+  Sound:
+    Enabled: true
+    Sound: "NOTE_PIANO"
+  Enchantments:
+    1:
+      Enchantment: "DURABILITY"
+      Level: 1
+  Cooldown: 80
+  Menu:
+    Title: "&6&lPocketBard &7- &eMenu"
+    Items:
+      Strength:
+        Name: "&6Strength"
+        Lore:
+          - ""
+          - "&eRight-Click to receive strength!"
+          - ""
+        Effect:
+          Strength:
+            Time: 5
+            Level: 2
+      Resistance:
+        Name: "&6Resistance"
+        Lore:
+          - ""
+          - "&eRight-Click to receive resistance!"
+          - ""
+        Effect:
+          Resistance:
+            Time: 5
+            Level: 3
+      Regeneration:
+        Name: "&6Regeneration"
+        Lore:
+          - ""
+          - "&eRight-Click to receive regeneration!"
+          - ""
+        Effect:
+          Regeneration:
+            Time: 5
+            Level: 3
+      JumpBoost:
+        Name: "&6JumpBoost"
+        Lore:
+          - ""
+          - "&eRight-Click to receive jumpboost!"
+          - ""
+        Effect:
+          JumpBoost:
+            Time: 8
+            Level: 6
+  Message:
+    - "&c%heart% &eYou have used your %ability%&e ability!"
+    - "&eYou are now on cooldown for&f 80 seconds!"
+  Item:
+    Material:
+      Material: "INK_SACK"
+      Byte: 1
+    Name: "&6&lPocketBard"
+    Lore:
+      - ""
+      - "&eRight-Click to open a GUI of bard effects!"
+      - ""
+
+Weed:
+  Enabled: true
+  Sound:
+    Enabled: true
+    Sound: "NOTE_PIANO"
+  Enchantments:
+    1:
+      Enchantment: "DURABILITY"
+      Level: 1
+  Effects:
+    1:
+      Effect: "INCREASE_DAMAGE"
+      Time: 4
+      Level: 2
+    2:
+      Effect: "CONFUSION"
+      Time: 10
+      Level: 2
+  Cooldown: 30
+  Message:
+    - "&c%heart% &eYou have used your %ability%&e ability!"
+    - "&eYou are now on cooldown for&f 30 seconds!"
+  Item:
+    Material: "SEEDS"
+    Name: "&6&lWeed"
+    Lore:
+      - ""
+      - "&eRight-Click to get some kush!"
+      - ""
+
+ExoticBone:
+  Enabled: true
+  Sound:
+    Enabled: true
+    Sound: "NOTE_PIANO"
+  Enchantments:
+    1:
+      Enchantment: "DURABILITY"
+      Level: 1
+  Cooldown: 60
+  Messages:
+    Damaged:
+      Interact:
+        - "&cYou cannont interact with this for another &c&l%time%&c seconds"
+      Message:
+        - "&c%heart% &eYou have been hit by a %ability%&e by &6%player%!"
+        - "&eYou cannot interact for the next &f10 seconds!"
+    Damager:
+      WrongPlayer:
+        - "&cYou have hit a different player! Your hits has been reset."
+      HitsReset:
+        - "&cYou failed to hit that player three times, your hits have been reset!"
+      Message:
+        - "&c%heart% &eYou have hit &6%player%&e with an %ability%&e!"
+        - "&eYou are now on cooldown for &f60 seconds!"
+  Settings:
+    ResetHitsAfter: 30
+    OneTimeUse: true
+    Interact:
+      Time: 10
+      Doors-Gates: false
+      Place: false
+      Break: true
+      Lever-Button: true
+  Item:
+    Material: "BONE"
+    Name: "&6&lExoticBone"
+    Lore:
+      - ""
+      - "&eHit an enemy three times with this bone to disable interaction for them!"
+      - ""
+
+TimerBone:
+  Enabled: true
+  Sound:
+    Enabled: true
+    Sound: "NOTE_PIANO"
+  Enchantments:
+    1:
+      Enchantment: "DURABILITY"
+      Level: 1
+  Cooldown: 60
+  Command: "timer set enderpearl 16 %player%"
+  Settings:
+    ResetHitsAfter: 30
+    OneTimeUse: true
+  Messages:
+    Damager:
+      WrongPlayer:
+        - "&cYou have hit a different player! Your hits has been reset."
+      HitsReset:
+        - "&cYou failed to hit that player three times, your hits have been reset!"
+      Message:
+        - "&c%heart% &eYou have hit &6%player%&e with an %ability%&e!"
+        - "&eYou are now on cooldown for &f60 seconds!"
+    Damaged:
+      - "&c%heart% &eYou have hit &6%player%&e with an %ability%&e!"
+      - "&eYour enderpearl timer has been set to &f16 seconds!"
+  Item:
+    Material: "BONE"
+    Name: "&6&lTimerBone"
+    Lore:
+      - ""
+      - "&eHit a enemy player three times to give them a enderpearl cooldown!"
+      - ""
+
+Rocket:
+  Enabled: true
+  Sound:
+    Enabled: true
+    Sound: "NOTE_PIANO"
+  Enchantments:
+    1:
+      Enchantment: "DURABILITY"
+      Level: 1
+  Cooldown: 30
+  Boost:
+    Y: 1
+    ZandX: 3
+  Message:
+    - "&c%heart%&e You have used your %ability%&e!"
+    - "&eYou are now on cooldown for&f 30 seconds!"
+  Item:
+    Material: "FIREWORK"
+    Name: "&6&lRocket"
+    Lore:
+      - ""
+      - "&eRight-Click to launch yourself into the air!"
+      - ""
+
+LazyBrewer:
+  Enabled: true
+  Sound:
+    Enabled: true
+    Sound: "NOTE_PIANO"
+  Enchantments:
+    1:
+      Enchantment: "DURABILITY"
+      Level: 1
+  Messages:
+    Used:
+      - "&c%heart%&e You have used a %ability%&e!"
+    Invalid:
+      - "&cThere is not enough room!, make sure there is enough room in a 4x4 radius!"
+  Item:
+    Material: "BREWING_STAND_ITEM"
+    Name: "&6&lLazy Brewer"
+    Lore:
+      - ""
+      - "&eRight-Click to place 3 double chests of potions!"
+      - ""
+
+GrapplingHook:
+  Enabled: true
+  Sound:
+    Enabled: true
+    Sound: "NOTE_PIANO"
+  Cooldown: 15
+  Enchantments:
+    1:
+      Enchantment: "DURABILITY"
+      Level: 1
+  Item:
+    Name: "&6&lGrappling Hook"
+    Lore:
+      - ""
+      - "&eUse this rod to fly in the sky!"
+      - ""
+
+SwapperAxe:
+  Enabled: true
+  Sound:
+    Enabled: true
+    Sound: "NOTE_PIANO"
+  Cooldown: 120
+  Enchantments:
+    1:
+      Enchantment: "DURABILITY"
+      LeveL: 1
+    2:
+      Enchantment: "DAMAGE_ALL"
+      Level: 3
+  Messages:
+    Damager:
+      Used:
+        - "&c%heart% &eYou have used the %ability%"
+        - "&cThey will lose their helmet in %delay% seconds!"
+      Full:
+        - "&c%damaged% had a full inventory! They have been given bad effects instead!"
+      PieceNotOn:
+        - "&c%damaged% isn't using wearing that piece!"
+    Damaged:
+      Hit:
+        - "&cYou have been hit with a swapper axe! You will lose your helmet in %delay% seconds!"
+      Full:
+        - "&cYou had a full inventory, your helmet  has been kept! You are given bad effects instead!"
+      Lost:
+        - "&cYour helmet has been taken off!"
+  Settings:
+    Delay: 3
+    DiamondOnly:
+      Enabled: true
+      Message:
+        - "&c%damager% is not wearing a diamond helmet!"
+    FullInventoryEffects:
+      Enabled: true
+      Effects:
+        1:
+          Effect: "BLINDNESS"
+          Time: 5
+          Level: 1
+        2:
+          Effect: "SLOW"
+          Time: 5
+          Level: 3
+  Item:
+    Material: "GOLD_AXE"
+    Name: "&6&lSwapper Axe"
+    Lore:
+      - ""
+      - "&eHit a player to make them lose their helmet!"
+      - ""

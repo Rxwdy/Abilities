@@ -1,0 +1,4 @@
+name: PurgeAbilities
+main: services.coral.ability.PurgeAbilities
+version: 1.8
+author: PurgeDevelopment
